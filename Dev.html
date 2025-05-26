@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas - Dev Team</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
+  <link rel="icon" type="image/png" href="AtlasIcon.png">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-lua.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      animation: animateBackground 10s infinite ease-in-out;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='3' result='blur' /%3E%3CfeMerge%3E%3CfeMergeNode in='blur' /%3E%3CfeMergeNode in='SourceGraphic' /%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Ccircle cx='12' cy='12' r='6' fill='%2300bfff' filter='url(%23glow)' /%3E%3C/svg%3E") 12 12, auto;
+    }
+
+    @keyframes animateBackground {
+      0% {
+        background-color: #0d0f14;
+      }
+
+      50% {
+        background-color: #11131a;
+      }
+
+      100% {
+        background-color: #0d0f14;
+      }
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e2535, #0d0f14);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    header .glow-text {
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 8px rgba(59, 130, 246, 0.6), 0 0 16px rgba(59, 130, 246, 0.3);
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    header .return-home-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background-color: transparent;
+      color: #3b82f6;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 8px 16px;
+      border: 2px solid #3b82f6;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header .return-home-btn:hover {
+      background-color: #3b82f6;
+      color: white;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-btns {
+      position: fixed;
+      right: 2rem;
+      bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .social-btns a {
+      background-color: #0f172a;
+      color: white;
+      padding: 20px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+      font-size: 2rem;
+    }
+
+    .social-btns a:hover {
+      transform: scale(1.2);
+      background-color: #3b82f6;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .social-btns .discord:hover {
+      background-color: #5865f2;
+    }
+
+    .social-btns .youtube:hover {
+      background-color: #ff0000;
+    }
+
+    @media (max-width: 640px) {
+      .social-btns {
+        right: 1rem;
+        bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white overflow-x-hidden">
+
+  <header class="py-16 text-center relative">
+    <a href="index.html" class="return-home-btn">Return Home</a>
+    <h1 class="glow-text">Welcome to Atlas</h1>
+    <p class="mt-4 text-lg text-gray-300">The Official Dev Team</p>
+    <p class="mt-2 text-sm text-gray-500">We are a team of dedicated developers working on Atlas executor and more!.</p>
+  </header>
+
+  <section class="mt-16 px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="card bg-blue-800 p-6 hover:scale-105 transition-all duration-300">
+        <img src="Arayz.png" alt="Arayz" class="w-44 h-44 rounded-full mx-auto mb-4 shadow-2xl">
+        <h3 class="text-2xl">Arayz</h3>
+        <p class="text-gray-400 mt-2">Role: Owner, lua developer</p>
+        <a href="https://discord.com/users/912987959408619521" target="_blank" class="text-blue-400 hover:text-blue-600">Discord</a>
+      </div>
+      <div class="card bg-blue-800 p-6 hover:scale-105 transition-all duration-300">
+        <img src="Shit.png" alt="Sethiddenproperty" class="w-44 h-44 rounded-full mx-auto mb-4 shadow-2xl">
+        <h3 class="text-2xl">Sethiddenproperty</h3>
+        <p class="text-gray-400 mt-2">Role: Website, Python, Lua, API, Lead Developer</p>
+        <a href="https://discord.com/users/1333865497476730942" target="_blank" class="text-blue-400 hover:text-blue-600">Discord</a>
+      </div>
+      <div class="card bg-blue-800 p-6 hover:scale-105 transition-all duration-300">
+        <img src="dtb.png" alt="DTB" class="w-44 h-44 rounded-full mx-auto mb-4 shadow-2xl">
+        <h3 class="text-2xl">DTB</h3>
+        <p class="text-gray-400 mt-2">Role: UI Developer</p>
+        <a href="https://discord.com/users/646522957488717834" target="_blank" class="text-blue-400 hover:text-blue-600">Discord</a>
+      </div>
+      <div class="card bg-blue-800 p-6 hover:scale-105 transition-all duration-300">
+        <img src="criticl.png" alt="Criticl" class="w-44 h-44 rounded-full mx-auto mb-4 shadow-2xl">
+        <h3 class="text-2xl">Criticl</h3>
+        <p class="text-gray-400 mt-2">Role: Lua Developer</p>
+        <a href="https://discord.com/users/1354652881835524206" target="_blank" class="text-blue-400 hover:text-blue-600">Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="social-btns">
+    <a href="https://discord.gg/bA3msE2Xcj" target="_blank" class="discord">
+      <i class="fab fa-discord"></i>
+    </a>
+    <a href="https://www.youtube.com/@AtlasOfficialUpdated" target="_blank" class="youtube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+</body>
+
+</html>
